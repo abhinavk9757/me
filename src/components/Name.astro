@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: String;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="colorText">
+  {title}
+</div>
+
+<style>
+  .colorText {
+    font-size: 3.75rem;
+    font-weight: bold;
+    line-height: 1;
+    color: rgba(103, 229, 101, 1);
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    100% {
+      text-shadow: 0 0 10px rgba(103, 229, 101, 1);
+    }
+  }
+</style>
