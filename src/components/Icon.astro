@@ -1,0 +1,23 @@
+---
+interface Props {
+  name: String;
+}
+
+import { Icon as AstIcon } from "astro-icon";
+const { name } = Astro.props;
+---
+
+<AstIcon name={name} />
+
+<style>
+  [astro-icon] {
+    height: 20px;
+    width: 20px;
+    color: #a1a1aa;
+    cursor: pointer;
+  }
+
+  [astro-icon]:hover {
+    color: rgba(103, 229, 101, 1);
+  }
+</style>

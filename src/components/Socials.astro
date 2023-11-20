@@ -1,0 +1,21 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<ul class="social-list">
+  <li><Icon name={"linkedin"} /></li>
+  <li><Icon name={"github"} /></li>
+  <li><Icon name={"discord"} /></li>
+  <li><Icon name={"youtube"} /></li>
+</ul>
+
+<style>
+  .social-list {
+    list-style-type: none;
+  }
+
+  .social-list > li {
+    display: inline;
+    padding-right: 1rem;
+  }
+</style>
