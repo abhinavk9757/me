@@ -1,0 +1,34 @@
+---
+import { gray, neon } from "../utilities/constants";
+interface Props {
+  glow?: boolean;
+  size?: string;
+}
+
+let { glow, size } = Astro.props;
+
+const animation = glow ? "glow 1.5s ease-in-out infinite alternate" : "none";
+const color = glow ? neon : gray;
+const _size = size || "3.75rem";
+---
+
+<div class="colorText">
+  <slot />
+</div>
+
+<style define:vars={{ animation, color, size: _size }}>
+  .colorText {
+    display: inline;
+    font-size: var(--size);
+    font-weight: bold;
+    line-height: 1;
+    color: var(--color);
+    animation: var(--animation);
+  }
+
+  @keyframes glow {
+    100% {
+      text-shadow: 0 0 10px var(--color);
+    }
+  }
+</style>

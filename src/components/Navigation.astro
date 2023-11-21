@@ -1,0 +1,26 @@
+---
+import { gray, neon } from "../utilities/constants";
+---
+
+<ul class="navigation">
+  <li><a href="/">home</a></li>
+</ul>
+
+<style define:vars={{ gray, neon }}>
+  .navigation {
+    list-style: none;
+  }
+  .navigation > li > a {
+    display: inline;
+    color: var(--gray);
+    cursor: pointer;
+  }
+
+  .navigation > li:hover > a:hover {
+    color: var(--neon);
+  }
+
+  .navigation > li > a:visited {
+    color: var(--gray);
+  }
+</style>
