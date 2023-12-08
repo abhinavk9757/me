@@ -3,15 +3,29 @@ import { gray, neon } from "../utilities/constants";
 ---
 
 <ul class="navigation">
-  <li><a href="/">home</a></li>
+  <li><a href="/me">home</a></li>
+  <li>
+    <a
+      href="https://docs.google.com/document/d/1hFokH3xdHsnXqy3etE5lkymLrP1Q5T1MdhSj5TpmStE/edit"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      resume
+    </a>
+  </li>
 </ul>
 
 <style define:vars={{ gray, neon }}>
   .navigation {
     list-style: none;
   }
-  .navigation > li > a {
+
+  .navigation > li {
     display: inline;
+    margin-left: 0.5rem;
+  }
+
+  .navigation > li > a {
     color: var(--gray);
     cursor: pointer;
   }
