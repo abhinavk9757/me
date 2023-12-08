@@ -3,10 +3,21 @@ import Icon from "./Icon.astro";
 ---
 
 <ul class="social-list">
-  <li><Icon name={"linkedin"} /></li>
-  <li><Icon name={"github"} /></li>
-  <li><Icon name={"discord"} /></li>
-  <li><Icon name={"youtube"} /></li>
+  <li>
+    <a href="https://www.linkedin.com/in/abhinavk9757/">
+      <Icon name={"linkedin"} />
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/abhinavk9757/">
+      <Icon name={"github"} />
+    </a>
+  </li>
+  <li>
+    <a href="https://discord.gg/g4hg6T7Ea2">
+      <Icon name={"discord"} />
+    </a>
+  </li>
 </ul>
 
 <style>
@@ -17,5 +28,9 @@ import Icon from "./Icon.astro";
   .social-list > li {
     display: inline;
     padding-right: 1rem;
+  }
+
+  .social-list > li > a {
+    text-decoration: none;
   }
 </style>
