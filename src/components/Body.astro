@@ -1,18 +1,28 @@
 ---
-import T from "./Text.astro";
+import T from "./Text/HeaderText.astro";
+import ST from "./Text/SubText.astro";
 ---
 
-<div class="content">
-  <T>
-    I am
-    <T glow={true}>Abhinav Kumar</T>
-  </T>
+<div class="body">
+  <div class="content">
+    <T>
+      Hello, I am
+      <T glow={true}>Abhinav</T>
+    </T>
+    <ST>Software Developer • Tinkerer • Tech Enthusiast</ST>
+  </div>
 </div>
 
 <style>
-  .content {
+  .body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 60vh;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
   }
 </style>

@@ -1,0 +1,25 @@
+---
+import { gray, neon } from "../../utilities/constants";
+interface Props {
+  colored?: boolean;
+}
+
+let { colored } = Astro.props;
+const color = colored ? neon : gray;
+---
+
+<div class="colorText">
+  <h3>
+    <slot />
+  </h3>
+</div>
+
+<style define:vars={{ color }}>
+  .colorText {
+    display: inline;
+    line-height: 1;
+    color: var(--color);
+    font-size: 1.3rem;
+    align-self: center;
+  }
+</style>

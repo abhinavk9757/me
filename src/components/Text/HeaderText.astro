@@ -1,5 +1,5 @@
 ---
-import { gray, neon } from "../utilities/constants";
+import { gray, neon } from "../../utilities/constants";
 interface Props {
   glow?: boolean;
   size?: string;
@@ -9,7 +9,7 @@ let { glow, size } = Astro.props;
 
 const animation = glow ? "glow 1.5s ease-in-out infinite alternate" : "none";
 const color = glow ? neon : gray;
-const _size = size || "3.75rem";
+const _size = size || "5rem";
 ---
 
 <div class="colorText">
@@ -20,7 +20,7 @@ const _size = size || "3.75rem";
   .colorText {
     display: inline;
     font-size: var(--size);
-    font-weight: bold;
+    font-weight: 900;
     line-height: 1;
     color: var(--color);
     animation: var(--animation);
